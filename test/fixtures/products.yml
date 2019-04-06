@@ -6,11 +6,11 @@ one:
   image_url: lorem.jpg
   price: 9.99
 
-#two:
-  #title: MyString
-  #description: MyText
- # image_url: lorem.jpg
-  #price: 9.99
+two:
+  title: MyString
+  description: MyText
+  image_url: lorem.jpg
+  price: 9.99
 
 ruby:
   title: Programming Ruby 1.9

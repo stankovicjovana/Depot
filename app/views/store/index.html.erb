@@ -1,6 +1,11 @@
 <% if notice %>
 	<aside id="notice"><%= notice %></aside>
 <% end %>
+<p>
+	<% if session[:count] > 5 %>
+		You have visited this page <%= pluralize(session[:count], "time") %> without adding to cart.
+	<% end %>
+</p>
 
 <h1>Your Pragmatic Catalog</h1>
 

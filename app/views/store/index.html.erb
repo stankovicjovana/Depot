@@ -1,6 +1,11 @@
 <% if notice %>
 	<aside id="notice"><%= notice %></aside>
 <% end %>
+<p>
+	<% if session[:count] > 5 %>
+		You have visited this page <%= pluralize(session[:count], "time") %> without adding to cart.
+	<% end %>
+</p>
 
 <h1>Your Pragmatic Catalog</h1>
 
@@ -16,6 +21,7 @@
 					</p>
 					<div class="price">
 						<%= number_to_currency(product.price) %>
+						<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
 					</div>
 				</li>
 			<% end %>

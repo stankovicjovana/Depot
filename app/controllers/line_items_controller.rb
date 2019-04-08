@@ -33,7 +33,7 @@ class LineItemsController < ApplicationController
       if @line_item.save
         session[:count] = 0
         
-        format.html { redirect_to @line_item.cart }
+        format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
@@ -68,7 +68,7 @@ class LineItemsController < ApplicationController
       @line_item.destroy
     end
     respond_to do |format|
-      format.html { redirect_to @cart, notice: 'One Line item was successfully removed.' }
+      format.html { redirect_to store_index_url, notice: 'One Line item was successfully removed.' }
       format.json { head :no_content }
     end
   end

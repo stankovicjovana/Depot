@@ -66,6 +66,7 @@ class ProductTest < ActiveSupport::TestCase
    	product = Product.new(description: "yyy",
    						  price: 1,
    						  image_url: "fred.gif")
+      
    	product.title = "123456789"
    	assert product.invalid?
    	assert_equal ["Title lenght must be minimum 10"],

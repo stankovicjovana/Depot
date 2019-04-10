@@ -70,6 +70,7 @@ class LineItemsController < ApplicationController
     end
     respond_to do |format|
       format.html { redirect_to store_index_url, notice: 'One Line item was successfully removed.' }
+      format.js 
       format.json { head :no_content }
     end
   end

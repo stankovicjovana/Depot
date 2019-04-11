@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.order(:name)
   end
 
   # GET /users/1
@@ -28,7 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to users_url, notice: 'User #{@user.name} was successfully created.' }
+        format.html { redirect_to users_url,
+              notice: "User #{@user.name} was successfully updated." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }

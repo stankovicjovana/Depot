@@ -32,7 +32,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.save
-        session[:count] = 0
+        session[:count] = nil
         
         format.html { redirect_to store_index_url }
         format.js { @current_item = @line_item}

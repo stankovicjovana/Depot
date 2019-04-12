@@ -73,4 +73,7 @@ es:
         po_number: "Número"
 
   thanks: "Gracias por su pedido"
-      
+  
+  line_items:
+    line_item:
+      remove: "Retirar"

@@ -85,5 +85,9 @@ en:
     
     
   thanks: "Thank you for your order"
+
+  line_items:
+    line_item:
+      remove: "Remove"
     
     

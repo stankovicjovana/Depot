@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem "nokogiri", ">= 1.10.8"
 gem "loofah", ">= 2.3.1"
 gem "rack", ">= 2.0.8"
+gem "rubyzip", ">= 1.3.0"
+
 
 
 
